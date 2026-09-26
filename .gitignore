@@ -1,0 +1,13 @@
+.venv/ 
+venv/ 
+__pycache__/ 
+*.pyc 
+raw_data/osm/ 
+raw_data/geo/ 
+geomarket/db/ 
+geomarket/data/ 
+outputs/ 
+geomarket/outputs/*.png 
+*.zip 
+ai_geomarket/ 
+.DS_Store

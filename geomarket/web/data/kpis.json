@@ -1,0 +1,13 @@
+{
+ "batiments": 383958,
+ "troncons_routiers": 30429,
+ "points_interet": 11868,
+ "arrondissements": 7,
+ "quartiers": 63,
+ "cellules": 431,
+ "agences_concurrentes": 82,
+ "score_moyen": 35.4,
+ "score_max": 67.2,
+ "superficie_km2": 284.8,
+ "surface_batie_km2": 43.8
+}

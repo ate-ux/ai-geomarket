@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI GeoMarket : intelligence géomarketing pour Yaoundé</title>
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="mark">AI GeoMarket</span>
+    <span class="sub">Choix d'implantation bancaire, Yaoundé</span>
+  </div>
+  <div class="kpis" id="kpis"></div>
+</header>
+
+<main class="layout">
+  <aside class="panel left">
+    <section class="block">
+      <h2>Pondérations des axes</h2>
+      <p class="hint">Ajustez le poids de chaque critère : la carte et le classement se recalculent.</p>
+      <div id="sliders"></div>
+      <button id="reset" class="ghost">Réinitialiser</button>
+    </section>
+    <section class="block">
+      <h2>Filtres</h2>
+      <label class="field">
+        <span>Arrondissement</span>
+        <select id="filtreArr"><option value="">Tous</option></select>
+      </label>
+      <label class="field">
+        <span>Distance minimale à une banque</span>
+        <select id="filtreDist">
+          <option value="0">Aucune contrainte</option>
+          <option value="500">500 m et plus</option>
+          <option value="1000">1 km et plus</option>
+          <option value="2000">2 km et plus</option>
+          <option value="3000">3 km et plus</option>
+        </select>
+      </label>
+      <label class="field">
+        <span>Score minimum</span>
+        <input type="range" id="filtreScore" min="0" max="70" value="0" step="5">
+        <output id="filtreScoreVal">0</output>
+      </label>
+    </section>
+    <section class="block">
+      <h2>Couches</h2>
+      <div id="couches"></div>
+    </section>
+  </aside>
+
+  <div class="mapwrap">
+    <div id="map"></div>
+    <div class="legend" id="legend">
+      <h3>Potentiel net</h3>
+      <div class="scale"></div>
+      <div class="scale-labels"><span>Faible</span><span>Élevé</span></div>
+      <p class="note">431 cellules hexagonales de 0,74 km²</p>
+    </div>
+  </div>
+
+  <aside class="panel right">
+    <section class="block">
+      <h2>Agent géomarketing</h2>
+      <p class="hint">Posez votre question en français : l'agent traduit votre demande en critères, interroge la base et classe les zones.</p>
+      <div class="exemples" id="exemples"></div>
+      <form id="formAgent" autocomplete="off">
+        <textarea id="question" rows="3" placeholder="Ex. : Trouve les 5 zones présentant le meilleur potentiel pour une nouvelle agence."></textarea>
+        <button type="submit" class="primary">Analyser</button>
+      </form>
+      <div class="reponse" id="reponse"></div>
+    </section>
+    <section class="block">
+      <h2>Classement des zones</h2>
+      <div id="classement" class="classement"></div>
+    </section>
+    <section class="block">
+      <h2>Performance du modèle</h2>
+      <div id="modele" class="modele"></div>
+    </section>
+  </aside>
+</main>
+
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script type="module" src="app.js"></script>
+</body>
+</html>
