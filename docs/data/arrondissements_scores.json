@@ -1,0 +1,51 @@
+[
+ {
+  "arrondissement": "Yaoundé V",
+  "score_moyen": 44.0,
+  "score_brut": 58.2,
+  "nb_cellules": 38,
+  "decote_pct": 23.8
+ },
+ {
+  "arrondissement": "Yaoundé VII",
+  "score_moyen": 40.1,
+  "score_brut": 48.4,
+  "nb_cellules": 49,
+  "decote_pct": 15.5
+ },
+ {
+  "arrondissement": "Yaoundé VI",
+  "score_moyen": 36.4,
+  "score_brut": 50.8,
+  "nb_cellules": 31,
+  "decote_pct": 27.1
+ },
+ {
+  "arrondissement": "Yaoundé IV",
+  "score_moyen": 36.2,
+  "score_brut": 43.5,
+  "nb_cellules": 91,
+  "decote_pct": 15.8
+ },
+ {
+  "arrondissement": "Yaoundé I",
+  "score_moyen": 33.1,
+  "score_brut": 41.2,
+  "nb_cellules": 87,
+  "decote_pct": 16.6
+ },
+ {
+  "arrondissement": "Yaoundé III",
+  "score_moyen": 32.1,
+  "score_brut": 37.1,
+  "nb_cellules": 100,
+  "decote_pct": 9.9
+ },
+ {
+  "arrondissement": "Yaoundé II",
+  "score_moyen": 31.6,
+  "score_brut": 38.5,
+  "nb_cellules": 35,
+  "decote_pct": 13.7
+ }
+]

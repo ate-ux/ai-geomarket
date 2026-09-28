@@ -1,0 +1,137 @@
+{
+ "segmentation": {
+  "algorithme": "KMeans sur rangs percentiles",
+  "k_retenu": 4,
+  "silhouette": 0.3035,
+  "optimum_statistique": 2,
+  "inerties": {
+   "2": 281.7601127867082,
+   "3": 225.85859582520277,
+   "4": 204.0711232882115,
+   "5": 188.51701646108205,
+   "6": 177.979614870139,
+   "7": 168.40623241282674,
+   "8": 159.3830487901952
+  },
+  "profils": [
+   {
+    "cluster": 1,
+    "nb_cellules": 174,
+    "arrondissement_dominant": "Yaoundé III",
+    "score_moyen": 29.5,
+    "dens_bat_moy": 219.0,
+    "dens_route_moy": 14235.5,
+    "commerce_moy": 0.0,
+    "distance_moy_m": 4832.2
+   },
+   {
+    "cluster": 2,
+    "nb_cellules": 124,
+    "arrondissement_dominant": "Yaoundé IV",
+    "score_moyen": 36.6,
+    "dens_bat_moy": 1491.7,
+    "dens_route_moy": 25211.6,
+    "commerce_moy": 0.2,
+    "distance_moy_m": 1672.9
+   },
+   {
+    "cluster": 3,
+    "nb_cellules": 75,
+    "arrondissement_dominant": "Yaoundé V",
+    "score_moyen": 41.8,
+    "dens_bat_moy": 1761.6,
+    "dens_route_moy": 29932.2,
+    "commerce_moy": 29.0,
+    "distance_moy_m": 832.2
+   },
+   {
+    "cluster": 0,
+    "nb_cellules": 58,
+    "arrondissement_dominant": "Yaoundé VII",
+    "score_moyen": 42.5,
+    "dens_bat_moy": 1323.0,
+    "dens_route_moy": 21404.1,
+    "commerce_moy": 16.1,
+    "distance_moy_m": 2044.0
+   }
+  ]
+ },
+ "substitut": {
+  "algorithme": "GradientBoostingRegressor (300 arbres, profondeur 3)",
+  "cible": "score_potentiel_net",
+  "r2_validation_croisee": 0.972,
+  "mae_points": 1.01,
+  "rmse_points": 1.39,
+  "note": "Cible derivee du score composite : la performance mesure la fidelite du substitut, pas une validation terrain.",
+  "importance": [
+   {
+    "indicateur": "dist_min_m",
+    "importance": 0.2272
+   },
+   {
+    "indicateur": "nb_sante",
+    "importance": 0.174
+   },
+   {
+    "indicateur": "dens_commerces_km2",
+    "importance": 0.1595
+   },
+   {
+    "indicateur": "nb_education",
+    "importance": 0.0839
+   },
+   {
+    "indicateur": "dens_routiere_m_km2",
+    "importance": 0.0785
+   },
+   {
+    "indicateur": "longueur_principale_m",
+    "importance": 0.0555
+   },
+   {
+    "indicateur": "dens_batie_m2_km2",
+    "importance": 0.0411
+   },
+   {
+    "indicateur": "nb_batiments",
+    "importance": 0.0389
+   },
+   {
+    "indicateur": "nb_axes_structurants",
+    "importance": 0.0358
+   },
+   {
+    "indicateur": "nb_lieux_culte",
+    "importance": 0.0317
+   },
+   {
+    "indicateur": "dens_bat_km2",
+    "importance": 0.0291
+   },
+   {
+    "indicateur": "nb_transport",
+    "importance": 0.0158
+   },
+   {
+    "indicateur": "nb_restauration",
+    "importance": 0.0143
+   },
+   {
+    "indicateur": "nb_banques",
+    "importance": 0.0051
+   },
+   {
+    "indicateur": "nb_commerces",
+    "importance": 0.0042
+   },
+   {
+    "indicateur": "nb_bureaux",
+    "importance": 0.0033
+   },
+   {
+    "indicateur": "nb_loisirs",
+    "importance": 0.0021
+   }
+  ]
+ }
+}
